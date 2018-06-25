@@ -16,7 +16,8 @@ On production machine:
 * cd spinning_cat_<release_id>
 * Install dependencies with `mix deps.get`
 * Create and migrate your database with `mix ecto.create && mix ecto.migrate`
-* Install Node.js dependencies with `cd assets && npm install`
+* Install Node.js dependencies with `cd assets && npm install && node node_modules/brunch/bin/brunch build`
+* cd ../
 * Start Phoenix endpoint with `mix phx.server`
 
 nb. this can be probably done better with edeliver, note that the digitalocean tutorial possibly skipped installing npm, node, and nodejs legacy /w yarn ... see below.
@@ -42,8 +43,8 @@ sudo apt-get install gcc g++ make
 curl -sL https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
 echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
 sudo apt-get update && sudo apt-get install yarn
-apt install nodejs-legacy
-apt-get install inotify-tools
+sudo apt install nodejs-legacy
+sudo apt-get install inotify-tools
 
 npm
 
