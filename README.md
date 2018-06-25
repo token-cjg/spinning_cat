@@ -1,5 +1,8 @@
 # SpinningCat
 
+Tutorial:
+https://www.digitalocean.com/community/tutorials/how-to-automate-elixir-phoenix-deployment-with-distillery-and-edeliver-on-ubuntu-16-04
+
 To start your Phoenix server:
 
   * Install dependencies with `mix deps.get`
