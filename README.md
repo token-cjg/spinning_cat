@@ -1,5 +1,28 @@
 # SpinningCat
 
+## Workflow to migrate release
+
+On personal computer:
+* on personal computer, make and test a change
+* push to github
+
+On github:
+* merge to master
+* make a new release
+
+On production machine:
+* wget the new release on production machine
+* tar -xzaf <zip_file>
+* cd spinning_cat_<release_id>
+* Install dependencies with `mix deps.get`
+* Create and migrate your database with `mix ecto.create && mix ecto.migrate`
+* Install Node.js dependencies with `cd assets && npm install`
+* Start Phoenix endpoint with `mix phx.server`
+
+nb. this can be probably done better with edeliver, note that the digitalocean tutorial possibly skipped installing npm, node, and nodejs legacy /w yarn ... see below.
+
+## Documentation and Setup
+
 Tutorial:
 https://www.digitalocean.com/community/tutorials/how-to-automate-elixir-phoenix-deployment-with-distillery-and-edeliver-on-ubuntu-16-04
 
